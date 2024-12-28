@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molecular Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #09090e;
+        }
+        .canvas-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            pointer-events: none;
+        }
+        #molecularCanvas {
+            filter: blur(15px);
+        }
+        #centerCanvas {
+            filter: blur(0);
+            mix-blend-mode: screen;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="canvas-container">
+        <canvas id="backgroundCanvas"></canvas>
+        <canvas id="molecularCanvas"></canvas>
+        <canvas id="centerCanvas"></canvas>
+    </div>
+    <script src="animation.js"></script>
+</body>
+</html>
